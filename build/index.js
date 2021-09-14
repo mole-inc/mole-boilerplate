@@ -60,6 +60,8 @@ cli.command('[dirName]', '').action(function () { return __awaiter(void 0, void 
                 upLevelDir = (0, path_1.resolve)(__dirname, '..');
                 targetDir = (0, path_1.resolve)(upLevelDir, projectName);
                 templateDir = (0, path_1.resolve)(upLevelDir, "templates/" + size);
+                console.log("debug - target: " + targetDir);
+                console.log("debug - template: " + templateDir);
                 if ((0, fs_extra_1.existsSync)(targetDir)) {
                     console.log("");
                     console.error(chalk_1.default.bgRed.black("Error") + ": \u65E2\u306B\u540C\u540D\u306E\u30C7\u30A3\u30EC\u30AF\u30C8\u30EA\u304C\u5B58\u5728\u3057\u307E\u3059\u3002");
