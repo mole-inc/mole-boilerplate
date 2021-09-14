@@ -19,6 +19,7 @@
   "devDependencies": {
     "@commitlint/cli": "^13.1.0",
     "@commitlint/config-conventional": "^13.1.0",
+    "@types/chalk": "^2.2.0",
     "@types/fs-extra": "^9.0.12",
     "@types/inquirer": "^7.3.3",
     "simple-git-hooks": "^2.6.1",
