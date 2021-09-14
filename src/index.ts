@@ -17,6 +17,8 @@ cli.command('[dirName]', '').action(async () => {
   const upLevelDir = resolve(__dirname, '..')
   const targetDir = resolve(upLevelDir, projectName)
   const templateDir = resolve(upLevelDir, `templates/${size}`)
+  console.log(`debug - target: ${targetDir}`)
+  console.log(`debug - template: ${templateDir}`)
   if (existsSync(targetDir)) {
     console.log(``)
     console.error(
