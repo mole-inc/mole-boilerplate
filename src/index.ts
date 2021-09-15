@@ -15,15 +15,17 @@ cli.command('[dirName]', '').action(async () => {
       return { projectName, size }
     }
   )
+  const cwdDir = cwd()
   const upLevelDir = resolve(__dirname, '..')
-  const targetDir = resolve(upLevelDir, projectName)
+  const targetDir = resolve(cwdDir, projectName)
   const templateDir = resolve(upLevelDir, `templates/${size}`)
 
   /*
   debug - target: H:\.pnpm-store\v3\tmp\_npx\27164\5\node_modules\.pnpm\github.com+xaxaxixd+lasso@9d81f05451151e3842845964ab56a1a30ab19a26\node_modules\lasso\cl-xxxx
   debug - template: H:\.pnpm-store\v3\tmp\_npx\27164\5\node_modules\.pnpm\github.com+xaxaxixd+lasso@9d81f05451151e3842845964ab56a1a30ab19a26\node_modules\lasso\templates\landing
   */
-  console.log(`debug - cwd: ${cwd}`)
+  console.log(`debug - dirname: ${__dirname}`)
+  console.log(`debug - cwd: ${cwd()}`)
   console.log(`debug - target: ${targetDir}`)
   console.log(`debug - template: ${templateDir}`)
 
