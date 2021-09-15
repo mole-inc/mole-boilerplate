@@ -1,4 +1,4 @@
-name: Build
+name: Build-test
 
 on:
   push:
@@ -35,8 +35,12 @@ jobs:
           pnpm install
           pnpm run build
 
+      - name: Mkdir
+        run: |
+          mkdir ${{ github.workspace }}/build
+
       - name: Archive build result
         uses: actions/upload-artifact@v2
         with:
           name: result
-          path: build/index.js
+          path: ${{ github.workspace }}/build/index.js
