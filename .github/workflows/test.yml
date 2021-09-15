@@ -37,14 +37,14 @@ jobs:
           pnpm install
           pnpm run build
 
-      - name: Mkdir
+      - name: Setting git
         run: |
-          mkdir build
-          mkdir -p myNewFolder/myNewSubFolder && cp -R build myNewFolder/myNewSubFolder
-          ls myNewFolder/MyNewSubFolder
+          git config --local user.email "sasaki.adoreillura.sd@gmail.com"
+          git config --local user.name "xaxaxixd"
 
-      - name: Archive build result
-        uses: actions/upload-artifact@v2
-        with:
-          name: result
-          path: build/index.js
+      - name: Commit build result
+        run: |
+          git add .
+          git commit -m "ci: build "
+          git pull
+          git push origin ${GITHUB_REF#refs/heads/}
