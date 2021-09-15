@@ -49,7 +49,7 @@ var enums_1 = require("./enums");
 var process_1 = require("process");
 var cli = (0, cac_1.default)();
 cli.command('[dirName]', '').action(function () { return __awaiter(void 0, void 0, void 0, function () {
-    var _a, projectName, size, upLevelDir, targetDir, templateDir;
+    var _a, projectName, size, cwdDir, upLevelDir, targetDir, templateDir;
     return __generator(this, function (_b) {
         switch (_b.label) {
             case 0: return [4 /*yield*/, (0, inquirer_1.prompt)(prompts_1.prompts).then(function (_a) {
@@ -58,16 +58,10 @@ cli.command('[dirName]', '').action(function () { return __awaiter(void 0, void 
                 })];
             case 1:
                 _a = _b.sent(), projectName = _a.projectName, size = _a.size;
+                cwdDir = (0, process_1.cwd)();
                 upLevelDir = (0, path_1.resolve)(__dirname, '..');
-                targetDir = (0, path_1.resolve)(upLevelDir, projectName);
+                targetDir = (0, path_1.resolve)(cwdDir, projectName);
                 templateDir = (0, path_1.resolve)(upLevelDir, "templates/" + size);
-                /*
-                debug - target: H:\.pnpm-store\v3\tmp\_npx\27164\5\node_modules\.pnpm\github.com+xaxaxixd+lasso@9d81f05451151e3842845964ab56a1a30ab19a26\node_modules\lasso\cl-xxxx
-                debug - template: H:\.pnpm-store\v3\tmp\_npx\27164\5\node_modules\.pnpm\github.com+xaxaxixd+lasso@9d81f05451151e3842845964ab56a1a30ab19a26\node_modules\lasso\templates\landing
-                */
-                console.log("debug - cwd: " + process_1.cwd);
-                console.log("debug - target: " + targetDir);
-                console.log("debug - template: " + templateDir);
                 if ((0, fs_extra_1.existsSync)(targetDir)) {
                     console.log("");
                     console.error(chalk_1.default.bgRed.black("Error") + ": \u65E2\u306B\u540C\u540D\u306E\u30C7\u30A3\u30EC\u30AF\u30C8\u30EA\u304C\u5B58\u5728\u3057\u307E\u3059\u3002");
