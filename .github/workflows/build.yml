@@ -12,7 +12,9 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: install
-        run: npm ci
+      - name: intall pnpm
+        uses: pnpm/action-setup@v2.0.1
+      - name: init
+        run: pnpm install
       - name: build
-        run: npm run build
+        run: pnpm run build
