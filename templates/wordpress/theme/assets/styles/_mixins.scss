@@ -1,0 +1,35 @@
+@use "sass:math";
+
+$designSizeLaptop: 1440;
+$designSizeMobile: 414;
+
+$mediaDefault: $designSizeLaptop;
+$mediaLarge: $designSizeLaptop + 1;
+$mediaSmall: $designSizeMobile * 2;
+$mediaExtraSmall: $designSizeMobile;
+
+@mixin mediaLarge {
+  @media (min-width: $mediaLarge+'px') {
+    @content;
+  }
+}
+@mixin mediaSmall {
+  @media (max-width: $mediaSmall+'px') {
+    @content;
+  }
+}
+@mixin mediaExtraSmall {
+  @media (max-width: $mediaExtraSmall+'px') {
+    @content;
+  }
+}
+
+@mixin mediaIE10 {
+  @media all and (-ms-high-contrast: none) {
+    @content;
+  }
+}
+
+@function vw($px, $vp) {
+  @return math.div($px, $vp) * 100vw;
+}

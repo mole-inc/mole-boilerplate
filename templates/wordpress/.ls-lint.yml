@@ -1,0 +1,21 @@
+ls:
+  src:
+    assets:
+      styles:
+        components:
+          .scss: PascalCase | regex:^_[A-Z][a-z]+(?:[A-Z][a-z]+)*$ | regex:^_index$
+          /*:
+            .dir: PascalCase
+        layout/*:
+          .dir: PascalCase
+          .scss: PascalCase
+      scripts:
+        .js: camelcase
+        .ts: camelcase
+ignore:
+  - .git
+  - node_modules
+  - public
+  - build
+  - plugins
+  - ai1wm-backups

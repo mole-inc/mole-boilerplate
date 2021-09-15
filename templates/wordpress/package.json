@@ -1,0 +1,49 @@
+{
+  "name": "test",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite serve",
+    "build": "tsc && vite build",
+    "serve": "vite preview",
+    "start": "wp-env start",
+    "stop": "wp-env stop",
+    "lint": "eslint --fix . --ext .ts",
+    "commitlint": "commitlint --edit",
+    "lslint": "npx ls-lint",
+    "stylelint": "stylelint --fix **/*.scss",
+    "prepare": "simple-git-hooks"
+  },
+  "simple-git-hooks": {
+    "commit-msg": "pnpm run lslint && pnpm run commitlint",
+    "pre-commit": "pnpm run lint && pnpm run stylelint"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^13.1.0",
+    "@commitlint/config-conventional": "^13.1.0",
+    "@ls-lint/ls-lint": "^1.10.0",
+    "@typescript-eslint/eslint-plugin": "^4.28.5",
+    "@typescript-eslint/parser": "^4.28.5",
+    "@wordpress/env": "^4.1.1",
+    "autoprefixer": "^10.3.1",
+    "css-declaration-sorter": "^6.1.1",
+    "cssnano": "^5.0.7",
+    "eslint": "^7.31.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-unused-imports": "^1.1.2",
+    "postcss": "^8.3.6",
+    "postcss-sort-media-queries": "^3.11.12",
+    "prettier": "^2.3.2",
+    "sass": "^1.36.0",
+    "simple-git-hooks": "^2.5.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-prettier": "^1.2.0",
+    "typescript": "^4.3.2",
+    "vite": "^2.4.4"
+  },
+  "dependencies": {
+    "ress": "^4.0.0"
+  }
+}
