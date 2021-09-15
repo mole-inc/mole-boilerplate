@@ -1,0 +1,54 @@
+name: Build-test
+
+on:
+  push:
+    branches:
+      - workflow/**
+
+env:
+  PNPM_VERSION: '6.15.0'
+  NODE_VERSION: '15.1.0'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: tsc
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - run: npm cache clean --force
+
+      - name: Intall pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: ${{ env.PNPM_VERSION }}
+          run_install: |
+            - recursive: false
+              args: [--shamefully-hoist]
+
+      - name: Init and build
+        run: |
+          pnpm install
+          pnpm run build
+
+      - name: Setting git
+        run: |
+          git config --local user.email "sasaki.adoreillura.sd@gmail.com"
+          git config --local user.name "xaxaxixd"
+
+      - name: Commit build result
+        run: |
+          git add -N .
+          if ! git diff --exit-code --quiet
+          then
+            git add .
+            git commit -m "ci: build "
+            git pull
+            git push origin ${GITHUB_REF#refs/heads/}
+          fi
