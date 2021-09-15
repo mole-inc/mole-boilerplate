@@ -37,7 +37,7 @@ jobs:
 
       - name: Mkdir
         run: |
-          mkdir ${{ github.workspace }}/build
+          !existsSync(${{ github.workspace }}/build) && mkdir ${{ github.workspace }}/build
 
       - name: Archive build result
         uses: actions/upload-artifact@v2
