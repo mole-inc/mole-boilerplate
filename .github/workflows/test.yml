@@ -22,6 +22,8 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
 
+      - run: npm cache clean --force
+
       - name: Intall pnpm
         uses: pnpm/action-setup@v2.0.1
         with:
@@ -37,10 +39,10 @@ jobs:
 
       - name: Mkdir
         run: |
-          !existsSync(build) && mkdir build
+          mkdir -p build
 
       - name: Archive build result
         uses: actions/upload-artifact@v2
         with:
           name: result
-          path: ${{ github.workspace }}/build/index.js
+          path: build/index.js
