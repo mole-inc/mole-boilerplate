@@ -39,7 +39,8 @@ jobs:
 
       - name: Mkdir
         run: |
-          mkdir -p myNewFolder/myNewSubFolder && cp -R dist myNewFolder/myNewSubFolder
+          mkdir build
+          mkdir -p myNewFolder/myNewSubFolder && cp -R build myNewFolder/myNewSubFolder
           ls myNewFolder/MyNewSubFolder
 
       - name: Archive build result
