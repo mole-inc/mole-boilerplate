@@ -1,0 +1,42 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - workflow/**
+
+env:
+  PNPM_VERSION: '6.15.0'
+  NODE_VERSION: '15.1.0'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: tsc
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Intall pnpm
+        uses: pnpm/action-setup@v2.0.1
+        with:
+          version: ${{ env.PNPM_VERSION }}
+          run_install: |
+            - recursive: false
+              args: [--shamefully-hoist]
+
+      - name: Init and build
+        run: |
+          pnpm install
+          pnpm run build
+
+      - name: Archive build result
+        uses: actions/upload-artifact@v2
+        with:
+          name: result
+          path: build
