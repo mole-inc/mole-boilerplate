@@ -25,7 +25,6 @@ specifiers:
   stylelint-prettier: ^1.2.0
   typescript: ^4.3.2
   vite: ^2.4.4
-  vite-plugin-compression: ^0.3.1
 
 dependencies:
   ress: 4.0.0
@@ -54,7 +53,6 @@ devDependencies:
   stylelint-prettier: 1.2.0_prettier@2.3.2+stylelint@13.13.1
   typescript: 4.3.5
   vite: 2.4.4
-  vite-plugin-compression: 0.3.1_vite@2.4.4
 
 packages:
 
@@ -758,11 +756,6 @@ packages:
   /astral-regex/2.0.0:
     resolution: {integrity: sha512-Z7tMw1ytTXt5jqMcOP+OQteU1VuNK9Y02uuJtKQ1Sv69jXQKKg5cibLwGJow8yzZP+eAc18EmLGPal0bp36rvQ==}
     engines: {node: '>=8'}
-    dev: true
-
-  /at-least-node/1.0.0:
-    resolution: {integrity: sha512-+q/t7Ekv1EDY2l6Gda6LLiX14rU9TV20Wa3ofeQmwPFZbOMo9DXrLbOjFaaclkXKWidIaopwAObQDqwWtGUjqg==}
-    engines: {node: '>= 4.0.0'}
     dev: true
 
   /autoprefixer/10.3.1_postcss@8.3.6:
@@ -1694,16 +1687,6 @@ packages:
     resolution: {integrity: sha512-C5owb14u9eJwizKGdchcDUQeFtlSHHthBk8pbX9Vc1PFZrLombudjDnNns88aYslCyF6IY5SUw3Roz6xShcEIQ==}
     engines: {node: '>=12'}
     dependencies:
-      graceful-fs: 4.2.6
-      jsonfile: 6.1.0
-      universalify: 2.0.0
-    dev: true
-
-  /fs-extra/9.1.0:
-    resolution: {integrity: sha512-hcg3ZmepS30/7BSFqRvoo3DOMQu7IjqxO5nCDt+zM9XWjb33Wg7ziNT+Qvqbuc3+gWpzO02JubVyk2G4Zvo1OQ==}
-    engines: {node: '>=10'}
-    dependencies:
-      at-least-node: 1.0.0
       graceful-fs: 4.2.6
       jsonfile: 6.1.0
       universalify: 2.0.0
@@ -3875,19 +3858,6 @@ packages:
       is-buffer: 2.0.5
       unist-util-stringify-position: 2.0.3
       vfile-message: 2.0.4
-    dev: true
-
-  /vite-plugin-compression/0.3.1_vite@2.4.4:
-    resolution: {integrity: sha512-KezpgSK/P1D63jyryYswPDsvONzKZRVimslSbdRiNCb0xq3nsLFA6RenghA+O7BQVC9ikfhu1eBaekXnwuPU2g==}
-    peerDependencies:
-      vite: '>=2.0.0'
-    dependencies:
-      chalk: 4.1.1
-      debug: 4.3.2
-      fs-extra: 9.1.0
-      vite: 2.4.4
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /vite/2.4.4:

@@ -9,12 +9,13 @@ ls:
         layout/*:
           .dir: PascalCase
           .scss: PascalCase
-      scrips:
+      scripts:
         .js: camelcase
         .ts: camelcase
 ignore:
   - .git
   - node_modules
   - public
+  - build
   - plugins
   - ai1wm-backups
