@@ -30,27 +30,25 @@ cli.command('[dirName]', '').action(async () => {
   }
   if (size === choices.LP) {
     copySync(templateDir, targetDir)
-    console.log(``)
-    console.log(``)
-    console.log(
-      `🎆${chalk.bgBlack.green(
-        `Success`
-      )}: ${projectName}フォルダの作成に成功しました！🎆`
-    )
-    console.log(``)
-    console.log(`🚀以下のコマンドで実装開始🚀`)
-    console.log(
-      `${chalk.bgBlack.green(1)}: ${chalk.white(`cd ${projectName}`)}`
-    )
-    console.log(`${chalk.bgBlack.green(2)}: ${chalk.white(`pnpm install`)}`)
-    console.log(`${chalk.bgBlack.green(3)}: ${chalk.white(`pnpm run dev`)}`)
-    console.log(``)
     return
   }
   if (size === choices.WP) {
     copySync(templateDir, targetDir)
     return
   }
+  console.log(``)
+  console.log(``)
+  console.log(
+    `🎆${chalk.bgBlack.green(
+      `Success`
+    )}: ${projectName}フォルダの作成に成功しました！🎆`
+  )
+  console.log(``)
+  console.log(`🚀以下のコマンドで実装開始🚀`)
+  console.log(`${chalk.bgBlack.green(1)}: ${chalk.white(`cd ${projectName}`)}`)
+  console.log(`${chalk.bgBlack.green(2)}: ${chalk.white(`pnpm install`)}`)
+  console.log(`${chalk.bgBlack.green(3)}: ${chalk.white(`pnpm run dev`)}`)
+  console.log(``)
 })
 cli.help()
 cli.parse()
