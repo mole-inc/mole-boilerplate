@@ -70,21 +70,21 @@ cli.command('[dirName]', '').action(function () { return __awaiter(void 0, void 
                 }
                 if (size === enums_1.choices.LP) {
                     (0, fs_extra_1.copySync)(templateDir, targetDir);
-                    console.log("");
-                    console.log("");
-                    console.log("\uD83C\uDF86" + chalk_1.default.bgBlack.green("Success") + ": " + projectName + "\u30D5\u30A9\u30EB\u30C0\u306E\u4F5C\u6210\u306B\u6210\u529F\u3057\u307E\u3057\u305F\uFF01\uD83C\uDF86");
-                    console.log("");
-                    console.log("\uD83D\uDE80\u4EE5\u4E0B\u306E\u30B3\u30DE\u30F3\u30C9\u3067\u5B9F\u88C5\u958B\u59CB\uD83D\uDE80");
-                    console.log(chalk_1.default.bgBlack.green(1) + ": " + chalk_1.default.white("cd " + projectName));
-                    console.log(chalk_1.default.bgBlack.green(2) + ": " + chalk_1.default.white("pnpm install"));
-                    console.log(chalk_1.default.bgBlack.green(3) + ": " + chalk_1.default.white("pnpm run dev"));
-                    console.log("");
                     return [2 /*return*/];
                 }
                 if (size === enums_1.choices.WP) {
                     (0, fs_extra_1.copySync)(templateDir, targetDir);
                     return [2 /*return*/];
                 }
+                console.log("");
+                console.log("");
+                console.log("\uD83C\uDF86" + chalk_1.default.bgBlack.green("Success") + ": " + projectName + "\u30D5\u30A9\u30EB\u30C0\u306E\u4F5C\u6210\u306B\u6210\u529F\u3057\u307E\u3057\u305F\uFF01\uD83C\uDF86");
+                console.log("");
+                console.log("\uD83D\uDE80\u4EE5\u4E0B\u306E\u30B3\u30DE\u30F3\u30C9\u3067\u5B9F\u88C5\u958B\u59CB\uD83D\uDE80");
+                console.log(chalk_1.default.bgBlack.green(1) + ": " + chalk_1.default.white("cd " + projectName));
+                console.log(chalk_1.default.bgBlack.green(2) + ": " + chalk_1.default.white("pnpm install"));
+                console.log(chalk_1.default.bgBlack.green(3) + ": " + chalk_1.default.white("pnpm run dev"));
+                console.log("");
                 return [2 /*return*/];
         }
     });
