@@ -47,6 +47,7 @@ var chalk_1 = __importDefault(require("chalk"));
 var prompts_1 = require("./prompts");
 var enums_1 = require("./enums");
 var process_1 = require("process");
+var logs_1 = require("./logs");
 var cli = (0, cac_1.default)();
 cli.command('[dirName]', '').action(function () { return __awaiter(void 0, void 0, void 0, function () {
     var _a, projectName, size, cwdDir, upLevelDir, targetDir, templateDir;
@@ -68,23 +69,17 @@ cli.command('[dirName]', '').action(function () { return __awaiter(void 0, void 
                     console.log("");
                     return [2 /*return*/];
                 }
+                (0, logs_1.logSuccessMkDir)(projectName);
                 if (size === enums_1.choices.LP) {
                     (0, fs_extra_1.copySync)(templateDir, targetDir);
+                    (0, logs_1.logForLanding)(projectName);
                     return [2 /*return*/];
                 }
                 if (size === enums_1.choices.WP) {
                     (0, fs_extra_1.copySync)(templateDir, targetDir);
+                    (0, logs_1.logForWordpress)(projectName);
                     return [2 /*return*/];
                 }
-                console.log("");
-                console.log("");
-                console.log("\uD83C\uDF86" + chalk_1.default.bgBlack.green("Success") + ": " + projectName + "\u30D5\u30A9\u30EB\u30C0\u306E\u4F5C\u6210\u306B\u6210\u529F\u3057\u307E\u3057\u305F\uFF01\uD83C\uDF86");
-                console.log("");
-                console.log("\uD83D\uDE80\u4EE5\u4E0B\u306E\u30B3\u30DE\u30F3\u30C9\u3067\u5B9F\u88C5\u958B\u59CB\uD83D\uDE80");
-                console.log(chalk_1.default.bgBlack.green(1) + ": " + chalk_1.default.white("cd " + projectName));
-                console.log(chalk_1.default.bgBlack.green(2) + ": " + chalk_1.default.white("pnpm install"));
-                console.log(chalk_1.default.bgBlack.green(3) + ": " + chalk_1.default.white("pnpm run dev"));
-                console.log("");
                 return [2 /*return*/];
         }
     });
