@@ -6,6 +6,7 @@ import chalk from 'chalk'
 import { prompts, promptsType } from './prompts'
 import { choices } from './enums'
 import { cwd } from 'process'
+import { logSuccessMkDir, logForLanding, logForWordpress } from './logs'
 
 const cli = cac()
 
@@ -28,27 +29,19 @@ cli.command('[dirName]', '').action(async () => {
     console.log(``)
     return
   }
+
+  logSuccessMkDir(projectName)
+
   if (size === choices.LP) {
     copySync(templateDir, targetDir)
+    logForLanding(projectName)
     return
   }
   if (size === choices.WP) {
     copySync(templateDir, targetDir)
+    logForWordpress(projectName)
     return
   }
-  console.log(``)
-  console.log(``)
-  console.log(
-    `🎆${chalk.bgBlack.green(
-      `Success`
-    )}: ${projectName}フォルダの作成に成功しました！🎆`
-  )
-  console.log(``)
-  console.log(`🚀以下のコマンドで実装開始🚀`)
-  console.log(`${chalk.bgBlack.green(1)}: ${chalk.white(`cd ${projectName}`)}`)
-  console.log(`${chalk.bgBlack.green(2)}: ${chalk.white(`pnpm install`)}`)
-  console.log(`${chalk.bgBlack.green(3)}: ${chalk.white(`pnpm run dev`)}`)
-  console.log(``)
 })
 cli.help()
 cli.parse()
