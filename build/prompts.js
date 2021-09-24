@@ -11,7 +11,7 @@ exports.prompts = [
     {
         type: 'list',
         name: 'size',
-        message: 'どういった案件ですか？',
+        message: 'どのような案件ですか？',
         choices: [enums_1.choices.LP, enums_1.choices.WP],
     },
 ];
