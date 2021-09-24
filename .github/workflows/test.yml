@@ -39,8 +39,8 @@ jobs:
 
       - name: Setting git
         run: |
-          git config --local user.email "sasaki.adoreillura.sd@gmail.com"
-          git config --local user.name "xaxaxixd"
+          git config --local user.email ${{ secrets.GIT_MAIL }}
+          git config --local user.name ${{ secrets.GIT_NAME }}
 
       - name: Commit build result
         run: |

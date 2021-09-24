@@ -14,7 +14,7 @@ export const prompts = [
   {
     type: 'list',
     name: 'size',
-    message: 'どういった案件ですか？',
+    message: 'どのような案件ですか？',
     choices: [choices.LP, choices.WP],
   },
 ]
