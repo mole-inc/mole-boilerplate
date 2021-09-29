@@ -5,14 +5,12 @@ add_action("wp_enqueue_scripts", function () {
   wp_enqueue_script("main", "http://localhost:3000/assets/scripts/main.ts", ["vite"], null);
 });
 
-add_filter(
-  "script_loader_tag", function ($tag, $handle, $src) {
-    if (in_array($handle, ["vite", "main"], true)) {
-      $tag = sprintf("<script type='module' src='%s' id='%s-js'></script>\n", $src, esc_attr($handle));
-    }
-    return $tag;
+add_filter("script_loader_tag", function ($tag, $handle, $src) {
+  if (in_array($handle, ["vite", "main"], true)) {
+    $tag = sprintf("<script type='module' src='%s' id='%s-js'></script>\n", $src, esc_attr($handle));
   }
-);
+  return $tag;
+}, 10, 3);
 
 add_theme_support('post-thumbnails');
 
