@@ -1,14 +1,21 @@
 <?php
 
 add_action("wp_enqueue_scripts", function () {
+  if(strpos($_SERVER["HTTP_HOST"], "localhost") === false) {
+    return;
+  }
   wp_enqueue_script("vite", "http://localhost:3000/@vite/client", [], null);
   wp_enqueue_script("main", "http://localhost:3000/assets/scripts/main.ts", ["vite"], null);
 });
 
 add_filter("script_loader_tag", function ($tag, $handle, $src) {
-  if (in_array($handle, ["vite", "main"], true)) {
-    $tag = sprintf("<script type='module' src='%s' id='%s-js'></script>\n", $src, esc_attr($handle));
+  if(strpos($_SERVER["HTTP_HOST"], "localhost") === false) {
+    return;
   }
+  if (!in_array($handle, ["vite", "main"], true)) {
+    return;
+  }
+  $tag = sprintf("<script type='module' src='%s' id='%s-js'></script>\n", $src, esc_attr($handle));
   return $tag;
 }, 10, 3);
 
