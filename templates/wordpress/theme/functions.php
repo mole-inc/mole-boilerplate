@@ -10,10 +10,10 @@ add_action("wp_enqueue_scripts", function () {
 
 add_filter("script_loader_tag", function ($tag, $handle, $src) {
   if(strpos($_SERVER["HTTP_HOST"], "localhost") === false) {
-    return;
+    return $tag;
   }
   if (!in_array($handle, ["vite", "main"], true)) {
-    return;
+    return $tag;
   }
   $tag = sprintf("<script type='module' src='%s' id='%s-js'></script>\n", $src, esc_attr($handle));
   return $tag;
