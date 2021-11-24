@@ -1,5 +1,5 @@
 
 以下のコードをターミナルで実行
 ```
-pnpx github:xaxaxixd/lasso
+pnpm exec github:xaxaxixd/lasso
 ```
