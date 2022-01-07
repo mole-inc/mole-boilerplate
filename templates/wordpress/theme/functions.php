@@ -19,6 +19,29 @@ add_filter("script_loader_tag", function ($tag, $handle, $src) {
   return $tag;
 }, 10, 3);
 
+function getStyle() {
+  if(strpos($_SERVER["HTTP_HOST"], "localhost") !== false) {
+    return;
+  }
+  $manifest = get_template_directory_uri().'/assets/build/manifest.json';
+  $json = json_decode(file_get_contents($manifest), true);
+  $target = $json['assets/scripts/main.js']['css'][0];
+  $url = get_template_directory_uri().'/assets/build/'.$target;
+
+  echo '<link rel="stylesheet" href="'.$url .'">'."\n";
+}
+
+function getScripts() {
+  if(strpos($_SERVER["HTTP_HOST"], "localhost") !== false) {
+    return;
+  }
+  $manifest = get_template_directory_uri().'/assets/build/manifest.json';
+  $json = json_decode(file_get_contents($manifest), true);
+  $target = $json['assets/scripts/main.js']['file'];
+  $url = get_template_directory_uri().'/assets/build/'.$target;
+  echo '<script type="module" src="'.$url.'"></script>'."\n";
+}
+
 add_theme_support('post-thumbnails');
 
 // wp_head()の整理
