@@ -6,7 +6,7 @@ export default defineConfig({
     target: 'es2015',
     rollupOptions: {
       input: {
-        input: 'theme/assets/scripts/main.ts',
+        input: 'theme/assets/scripts/main.js',
       },
     },
     outDir: 'assets/build',
