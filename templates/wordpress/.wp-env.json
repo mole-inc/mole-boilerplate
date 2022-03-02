@@ -1,7 +1,7 @@
 {
   "core": "https://ja.wordpress.org/latest-ja.zip",
-  "port": 5000,
-  "testsPort": 5001,
+  "port": 3001,
+  "testsPort": 3002,
   "plugins": [
     "./plugins/advanced-custom-fields-pro",
     "https://downloads.wordpress.org/plugin/all-in-one-wp-migration.zip",

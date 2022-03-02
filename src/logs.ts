@@ -37,6 +37,14 @@ const logForWordpress = (projectName: projectName) => {
   console.log(`${chalk.bgBlack.green(3)}: ${chalk.white(`pnpm run start`)}`)
   console.log(`${chalk.bgBlack.green(4)}: ${chalk.white(`pnpm run dev`)}`)
   console.log(``)
+  console.log(
+    `${chalk.bgBlack.green('URL')}: ${chalk.white(
+      `http://localhost:3001/wp-admin`
+    )}`
+  )
+  console.log(`${chalk.bgBlack.green('ID')}: ${chalk.white(`admin`)}`)
+  console.log(`${chalk.bgBlack.green('PW')}: ${chalk.white(`password`)}`)
+  console.log(``)
 }
 
 export { logSuccessMkDir, logStartDevelopment, logForLanding, logForWordpress }
