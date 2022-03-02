@@ -34,5 +34,9 @@ var logForWordpress = function (projectName) {
     console.log(chalk_1.default.bgBlack.green(3) + ": " + chalk_1.default.white("pnpm run start"));
     console.log(chalk_1.default.bgBlack.green(4) + ": " + chalk_1.default.white("pnpm run dev"));
     console.log("");
+    console.log(chalk_1.default.bgBlack.green('URL') + ": " + chalk_1.default.white("http://localhost:3001/wp-admin"));
+    console.log(chalk_1.default.bgBlack.green('ID') + ": " + chalk_1.default.white("admin"));
+    console.log(chalk_1.default.bgBlack.green('PW') + ": " + chalk_1.default.white("password"));
+    console.log("");
 };
 exports.logForWordpress = logForWordpress;
