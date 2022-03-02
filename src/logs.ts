@@ -10,10 +10,10 @@ const logSuccessMkDir = (projectName: projectName) => {
       `Success`
     )}: ${projectName}フォルダの作成に成功しました！🎆`
   )
-  console.log(``)
 }
 
 const logStartDevelopment = () => {
+  console.log(``)
   console.log(`🚀以下のコマンドで実装開始🚀`)
 }
 
@@ -26,6 +26,7 @@ const logForLanding = (projectName: projectName) => {
 }
 
 const logForWordpress = (projectName: projectName) => {
+  console.log(``)
   console.log(`⚠Docker Desktopをインストールの上⚠`)
   console.log(
     `${chalk.underline.cyan(`https://www.docker.com/products/docker-desktop`)}`
