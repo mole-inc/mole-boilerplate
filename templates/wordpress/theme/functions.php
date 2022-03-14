@@ -5,7 +5,7 @@ add_action("wp_enqueue_scripts", function () {
     return;
   }
   wp_enqueue_script("vite", "http://localhost:3000/@vite/client", [], null);
-  wp_enqueue_script("main", "http://localhost:3000/assets/scripts/main.ts", ["vite"], null);
+  wp_enqueue_script("main", "http://localhost:3000/assets/scripts/main.js", ["vite"], null);
 });
 
 add_filter("script_loader_tag", function ($tag, $handle, $src) {
