@@ -42,6 +42,18 @@ function getScripts() {
   echo '<script type="module" src="'.$url.'"></script>'."\n";
 }
 
+function getParts($template_name, $args=null){
+  if (isset($args)) {
+    set_query_var('args', $args);
+  }
+  get_template_part($template_name);
+}
+
+function getUrl(){
+  return 'https://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
+}
+
+
 add_theme_support('post-thumbnails');
 
 // wp_head()の整理
