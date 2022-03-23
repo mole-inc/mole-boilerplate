@@ -7,9 +7,11 @@
     "https://downloads.wordpress.org/plugin/all-in-one-wp-migration.zip",
     "https://downloads.wordpress.org/plugin/custom-post-type-ui.zip",
     "https://downloads.wordpress.org/plugin/contact-form-7.zip",
-    "https://downloads.wordpress.org/plugin/classic-editor.1.6.2.zip",
+    "https://downloads.wordpress.org/plugin/classic-editor.zip",
     "https://downloads.wordpress.org/plugin/webp-express.zip",
-    "https://downloads.wordpress.org/plugin/wp-pagenavi.zip"
+    "https://downloads.wordpress.org/plugin/wp-pagenavi.zip",
+    "https://downloads.wordpress.org/plugin/tinymce-advanced.zip",
+    "https://downloads.wordpress.org/plugin/custom-post-type-permalinks.zip"
   ],
   "themes": ["./theme"],
   "mappings": {
