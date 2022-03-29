@@ -11,7 +11,8 @@
     "https://downloads.wordpress.org/plugin/webp-express.zip",
     "https://downloads.wordpress.org/plugin/wp-pagenavi.zip",
     "https://downloads.wordpress.org/plugin/tinymce-advanced.zip",
-    "https://downloads.wordpress.org/plugin/custom-post-type-permalinks.zip"
+    "https://downloads.wordpress.org/plugin/custom-post-type-permalinks.zip",
+    "https://downloads.wordpress.org/plugin/wp-basic-authentication.zip"
   ],
   "themes": ["./theme"],
   "mappings": {
