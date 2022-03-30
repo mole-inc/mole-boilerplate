@@ -23,11 +23,7 @@ function getStyle() {
   if(strpos($_SERVER["HTTP_HOST"], "localhost") !== false) {
     return;
   }
-  $manifest = get_template_directory_uri().'/assets/build/manifest.json';
-  $json = json_decode(file_get_contents($manifest), true);
-  $target = $json['assets/scripts/main.js']['css'][0];
-  $url = get_template_directory_uri().'/assets/build/'.$target;
-
+  $url = get_template_directory_uri().'/assets/build/input.css';
   echo '<link rel="stylesheet" href="'.$url .'">'."\n";
 }
 
@@ -35,10 +31,7 @@ function getScripts() {
   if(strpos($_SERVER["HTTP_HOST"], "localhost") !== false) {
     return;
   }
-  $manifest = get_template_directory_uri().'/assets/build/manifest.json';
-  $json = json_decode(file_get_contents($manifest), true);
-  $target = $json['assets/scripts/main.js']['file'];
-  $url = get_template_directory_uri().'/assets/build/'.$target;
+  $url = get_template_directory_uri().'/assets/build/input.js';
   echo '<script type="module" src="'.$url.'"></script>'."\n";
 }
 

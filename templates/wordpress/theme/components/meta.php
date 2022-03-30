@@ -45,5 +45,10 @@
   <link rel="icon" href="<?php echo get_template_directory_uri();?>/assets/favicon.svg">
 
   <?php
+    getStyle();
+    getScripts();
+  ?>
+
+  <?php
     wp_head();
   ?>
