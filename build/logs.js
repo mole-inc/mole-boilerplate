@@ -13,7 +13,7 @@ var logSuccessMkDir = function (projectName) {
 exports.logSuccessMkDir = logSuccessMkDir;
 var logStartDevelopment = function () {
     console.log("");
-    console.log("\uD83D\uDE80\u4EE5\u4E0B\u306E\u30B3\u30DE\u30F3\u30C9\u3067\u5B9F\u88C5\u958B\u59CB\uD83D\uDE80");
+    console.log("\uD83D\uDE80\uD83D\uDE80\uD83D\uDE80---\u4EE5\u4E0B\u306E\u30B3\u30DE\u30F3\u30C9\u3067\u5B9F\u88C5\u958B\u59CB---\uD83D\uDE80\uD83D\uDE80\uD83D\uDE80");
 };
 exports.logStartDevelopment = logStartDevelopment;
 var logForLanding = function (projectName) {
