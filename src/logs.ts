@@ -14,7 +14,7 @@ const logSuccessMkDir = (projectName: projectName) => {
 
 const logStartDevelopment = () => {
   console.log(``)
-  console.log(`🚀以下のコマンドで実装開始🚀`)
+  console.log(`🚀🚀🚀---以下のコマンドで実装開始---🚀🚀🚀`)
 }
 
 const logForLanding = (projectName: projectName) => {

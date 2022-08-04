@@ -1,5 +1,4 @@
-
 以下のコードをターミナルで実行
 ```
-pnpx github:xaxaxixd/lasso
+pnpm dlx github:mole-inc/mole-boilerplate
 ```
