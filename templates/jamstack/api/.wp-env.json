@@ -5,12 +5,13 @@
   "plugins": [
     "./plugins/advanced-custom-fields-pro",
     "https://downloads.wordpress.org/plugin/all-in-one-wp-migration.zip",
+    "https://downloads.wordpress.org/plugin/acf-to-rest-api.zip",
     "https://downloads.wordpress.org/plugin/custom-post-type-ui.zip",
     "https://downloads.wordpress.org/plugin/contact-form-7.zip",
     "https://downloads.wordpress.org/plugin/classic-editor.zip",
     "https://downloads.wordpress.org/plugin/webp-express.zip",
-    "https://downloads.wordpress.org/plugin/wp-pagenavi.zip",
     "https://downloads.wordpress.org/plugin/tinymce-advanced.zip",
+    "https://downloads.wordpress.org/plugin/wp-rest-cache.zip",
     "https://downloads.wordpress.org/plugin/wp-basic-authentication.zip"
   ],
   "themes": ["./theme"],
