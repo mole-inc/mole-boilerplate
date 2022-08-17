@@ -2,7 +2,7 @@ import { defaultProjectName, choices } from './enums'
 
 export type promptsType = {
   projectName: string
-  size: string
+  purpose: string
 }
 
 export const prompts = [
@@ -13,8 +13,8 @@ export const prompts = [
   },
   {
     type: 'list',
-    name: 'size',
+    name: 'purpose',
     message: 'どのような案件ですか？',
-    choices: [choices.LP, choices.WP],
+    choices: [choices.JS, choices.LP, choices.WP],
   },
 ]

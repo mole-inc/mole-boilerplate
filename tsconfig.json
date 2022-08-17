@@ -1,7 +1,7 @@
 {
   "include": ["src"],
   "compilerOptions": {
-    "target": "es5",
+    "target": "ESNext",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "rootDir": "./src",

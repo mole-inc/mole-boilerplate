@@ -1,0 +1,11 @@
+{
+  "name": "test",
+  "version": "0.0.0",
+  "scripts": {
+    "start": "wp-env start",
+    "stop": "wp-env stop"
+  },
+  "devDependencies": {
+    "@wordpress/env": "^5.1.0"
+  }
+}
