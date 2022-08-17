@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "ts-node src/index.ts",
     "build": "tsc",
-    "commitlint": "commitlint --edit",
+    "commitlint": "commitlint --edit $1",
     "actionlint": "pnpm exec node-actionlint",
     "prepare": "simple-git-hooks"
   },
