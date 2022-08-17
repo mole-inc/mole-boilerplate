@@ -1,5 +1,4 @@
-import commandExists from 'command-exists'
-import { existsSync, copySync, exists } from 'fs-extra'
+import { existsSync, copySync } from 'fs-extra'
 import { resolve } from 'path'
 import cac from 'cac'
 import { prompt } from 'inquirer'
@@ -12,7 +11,6 @@ import {
   logForWordpress,
   errorDirectoryExists,
   logForJamstack,
-  errorPleaseInstallFirebaseTools,
 } from './logs'
 
 const cli = cac()

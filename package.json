@@ -1,5 +1,5 @@
 {
-  "name": "lasso",
+  "name": "mole-boilerplate",
   "bin": "build/index.js",
   "scripts": {
     "dev": "ts-node src/index.ts",
