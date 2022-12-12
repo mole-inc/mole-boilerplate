@@ -1,4 +1,13 @@
-<?php get_template_part('components/head'); ?>
+<?php
+// トップページ表示用のテンプレート
+
+$pageTitle = 'INDEX'; // ここで$pageTitleに入れた値がtitleになるはず
+$ogpImg = get_template_directory_uri().'/assets/images/ogpNews.jpg';
+
+global $pageTitle;
+global $ogpImg;
+get_template_part('components/head');
+?>
 
 <main class="Page">
   <div style="
