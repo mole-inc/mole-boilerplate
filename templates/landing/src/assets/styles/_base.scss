@@ -1,5 +1,6 @@
 @use "sass:math";
 @use 'mixins.scss';
+@use 'variables.scss';
 
 html {
   backface-visibility: hidden;

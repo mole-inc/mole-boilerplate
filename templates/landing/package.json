@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite serve",
-    "build": "tsc && vite build",
+    "build": "vite build",
     "serve": "vite preview"
   },
   "devDependencies": {
@@ -14,7 +14,8 @@
     "postcss-sort-media-queries": "^3.11.12",
     "prettier": "^2.3.2",
     "sass": "^1.36.0",
-    "vite": "^2.4.4"
+    "vite": "^2.4.4",
+    "vite-plugin-handlebars": "^1.6.0"
   },
   "dependencies": {
     "ress": "^4.0.0"
