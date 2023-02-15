@@ -6,6 +6,7 @@
     "build": "vite build",
     "serve": "vite preview",
     "start": "wp-env start",
+    "destroy": "wp-env destroy",
     "stop": "wp-env stop"
   },
   "devDependencies": {
