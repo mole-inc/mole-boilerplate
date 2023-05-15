@@ -39,6 +39,11 @@ html {
   background-color: var(--black);
 }
 
+* {
+  grid-auto-rows: max-content;
+  grid-auto-columns: 100%;
+}
+
 *,
 *:before,
 *:after {
@@ -71,7 +76,7 @@ img {
   display: block;
 }
 
-img {
+img, svg {
   width: 100%;
   height: auto;
   object-fit: contain;
