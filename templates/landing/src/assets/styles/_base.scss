@@ -1,6 +1,5 @@
 @use "sass:math";
 @use 'mixins.scss';
-@use 'variables.scss';
 
 html {
   backface-visibility: hidden;
@@ -58,6 +57,7 @@ h4,
 h5,
 h6 {
   margin-block: 0;
+  font-size: inherit;
 }
 
 ul {
@@ -72,12 +72,13 @@ button {
 
 canvas,
 svg,
+video,
 picture,
 img {
   display: block;
 }
 
-img, svg {
+img, svg, video {
   width: 100%;
   height: auto;
   object-fit: contain;
