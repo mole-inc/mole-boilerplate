@@ -7,7 +7,8 @@
     "serve": "vite preview",
     "start": "wp-env start",
     "destroy": "wp-env destroy",
-    "stop": "wp-env stop"
+    "stop": "wp-env stop",
+    "backup": "wp-env run cli ai1wm backup --exclude-spam-comments --exclude-themes --exclude-inactive-themes --exclude-inactive-plugins"
   },
   "devDependencies": {
     "@ls-lint/ls-lint": "^1.10.0",
