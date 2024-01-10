@@ -127,3 +127,23 @@ add_filter('the_content', 'filter_ptags_on_images');
 function getIdBySlug($page_slug) {
   return get_page_by_path($page_slug)->ID;
 }
+
+add_filter(
+  'page_template',
+  function ($template) {
+      global $post;
+      if ($post->post_parent) {
+          $parent = get_post(
+              reset(array_reverse(get_post_ancestors($post->ID)))
+          );
+          $child_template = locate_template(
+              [
+                  'page-'.$parent->post_name.'-'.$post->post_name.'.php',
+                  'page-'.$parent->post_name.'-page.php',
+              ]
+          );
+          if ($child_template) return $child_template;
+      }
+      return $template;
+  }
+);
