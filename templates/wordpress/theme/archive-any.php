@@ -38,6 +38,8 @@ get_template_part('components/head');
     $title = $post->post_title;
     $termsFoo = get_the_terms($id, 'foo'); // 投稿に紐づいているfooタクソノミーを配列で取得できる
     $fieldBaz = get_field('baz', $id);
+    $date = get_the_date('Y.m.d', $id);
+    $thumb = get_the_post_thumbnail_url($id, 'full');
 ?>
 <?php
   endforeach;
