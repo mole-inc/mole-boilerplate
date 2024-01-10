@@ -11,16 +11,16 @@
     "backup": "wp-env run cli ai1wm backup --exclude-spam-comments --exclude-themes --exclude-inactive-themes --exclude-inactive-plugins"
   },
   "devDependencies": {
-    "@ls-lint/ls-lint": "^1.10.0",
-    "@wordpress/env": "^4.1.1",
-    "autoprefixer": "^10.3.1",
-    "css-declaration-sorter": "^6.1.1",
-    "cssnano": "^5.0.7",
-    "postcss": "^8.3.6",
-    "postcss-sort-media-queries": "^3.11.12",
-    "prettier": "^2.3.2",
-    "sass": "^1.36.0",
-    "vite": "^2.4.4"
+    "@ls-lint/ls-lint": "^1.11.2",
+    "@wordpress/env": "^8.7.0",
+    "autoprefixer": "^10.4.15",
+    "css-declaration-sorter": "^6.4.1",
+    "cssnano": "^5.1.15",
+    "postcss": "^8.4.29",
+    "postcss-sort-media-queries": "^3.12.13",
+    "prettier": "^2.8.8",
+    "sass": "^1.67.0",
+    "vite": "^2.9.16"
   },
   "dependencies": {
     "ress": "^4.0.0"
